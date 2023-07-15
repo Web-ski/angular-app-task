@@ -1,24 +1,15 @@
 <div class="content">
   <header>
-    <p>Header</p>
+    <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">Countries App</a>
   </header>
 
   <main>
-    <p>Main</p>
+    <div>{{ posts }}</div>
+    <router-outlet></router-outlet>
   </main>
 
   <!-- Footer -->
   <footer>
-    <p>Footer</p>
+    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About the Author</a>
   </footer>
 </div>
-
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
-<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
-<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
-<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<router-outlet></router-outlet>
