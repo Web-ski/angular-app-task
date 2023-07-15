@@ -4,10 +4,21 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { StartComponent } from "./start/start.component";
+import { AboutComponent } from "./about/about.component";
+import { RegionComponent } from "./region/region.component";
+import { CountryComponent } from "./country/country.component";
+import { PageNotFoundComponent } from "./404/404.component";
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    StartComponent,
+    AboutComponent,
+    RegionComponent,
+    CountryComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

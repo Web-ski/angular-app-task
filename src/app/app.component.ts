@@ -1,21 +1,10 @@
-import { Component, OnInit } from '@angular/core';
-import { ApiService } from "./api.service";
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
+export class AppComponent {
   title = 'angular-app-task';
-  posts:any;
-
-  constructor(private service:ApiService) {}
-
-  ngOnInit() {
-    this.service.getApi()
-      .subscribe(response => {
-        this.posts = response;
-      });
-  }
 }

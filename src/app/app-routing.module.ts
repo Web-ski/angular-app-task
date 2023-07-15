@@ -8,8 +8,8 @@ import { PageNotFoundComponent } from "./404/404.component";
 
 const routes: Routes = [
   { path: '', component: StartComponent },
-  { path: 'region', component: RegionComponent },
-  { path: 'country', component: CountryComponent },
+  { path: 'regions/:name', component: RegionComponent },
+  { path: 'countries/:name', component: CountryComponent },
   { path: 'about', component: AboutComponent },
   { path: "**", component: PageNotFoundComponent }
 ];

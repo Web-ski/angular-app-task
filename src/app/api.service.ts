@@ -7,11 +7,12 @@ import { HttpClient } from '@angular/common/http';
   }
 )
 export class ApiService {
-  private url = 'https://restcountries.com/#api-endpoints-v3-region';
+  private url = 'https://restcountries.com/v3.1/region/';
+
   constructor(private http: HttpClient) { }
 
 
-  getApi() {
-    return this.http.get(this.url);
+  getApi(value:string) {
+    return this.http.get(this.url + value);
   }
 }

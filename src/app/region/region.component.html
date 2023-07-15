@@ -1,3 +1,15 @@
-<div>
+<div class="view-wrapper">
   <h1>Region View</h1>
+  <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+    Go back to the Main view
+  </a>
+  <nav *ngIf="countriesList">
+    <ul>
+      <li *ngFor="let country of countriesList" >
+        <a [routerLink]="['countries/', country]" routerLinkActive="active" ariaCurrentWhenActive="page">
+          {{ country }}
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>

@@ -1,3 +1,15 @@
-<div>
-  <h1>Start View</h1>
+<div class="view-wrapper">
+  <h1 class="page-title">CountriesBook</h1>
+  <p class="view-description">
+    Hi, you are.... on the web...
+  </p>
+  <nav>
+    <ul>
+      <li *ngFor="let region of regionsList" >
+        <a [routerLink]="['regions/', region]" routerLinkActive="active" ariaCurrentWhenActive="page">
+          {{ region }}
+        </a>
+      </li>
+    </ul>
+  </nav>
 </div>
