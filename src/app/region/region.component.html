@@ -1,15 +1,18 @@
 <div class="view-wrapper">
-  <h1>Region View</h1>
-  <a routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
+  <h1>Countries of {{ region }}</h1>
+  <a class="go-back-link" routerLink="/" routerLinkActive="active" ariaCurrentWhenActive="page">
     Go back to the Main view
   </a>
   <nav *ngIf="countriesList">
     <ul>
-      <li *ngFor="let country of countriesList" >
-        <a [routerLink]="['countries/', country]" routerLinkActive="active" ariaCurrentWhenActive="page">
-          {{ country }}
+      <li *ngFor="let country of countriesList">
+        <a [routerLink]="[country.name.common]" routerLinkActive="active" ariaCurrentWhenActive="page">
+          {{ country.flag }} {{ country.name.common }}
         </a>
       </li>
     </ul>
   </nav>
+  <div class="loader" *ngIf="!countriesList">
+    <div></div>
+  </div>
 </div>

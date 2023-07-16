@@ -7,8 +7,17 @@
     <router-outlet></router-outlet>
   </main>
 
+  <dialog #aboutDialog>
+    <div class="dialog-content-wrapper">
+      <div class="dialog-header">
+        <h2>About the Author</h2><button (click)="aboutDialog.close()">&#x2715;</button>
+      </div>
+      <app-about />
+    </div>
+  </dialog>
   <!-- Footer -->
   <footer>
-    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About the Author</a>
+<!--    <a routerLink="/about" routerLinkActive="active" ariaCurrentWhenActive="page">About the Author</a>-->
+    <button class="open-modal" (click)="aboutDialog.show()">About the Author</button>
   </footer>
 </div>

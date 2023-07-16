@@ -7,7 +7,10 @@ import { Component } from '@angular/core';
 })
 export class StartComponent {
   public regionsList: string[] = [
-    "europe",
-    "asia"
+    "Africa",
+    "America",
+    "Asia",
+    "Europe",
+    "Oceania"
   ]
 }
