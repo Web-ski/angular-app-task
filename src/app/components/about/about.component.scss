@@ -1,0 +1,112 @@
+@import "../../../styles/variables";
+
+.dialog {
+  border-radius: 15px;
+
+  .dialog-content-wrapper {
+    background-color: $digital-white;
+    z-index: 100;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border: none;
+
+    @media screen and (min-width: 768px) {
+      max-width: 80vw;
+    }
+
+    @media screen and (min-width: 1440px) {
+      max-width: 60vw;
+    }
+
+    .dialog-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 40px;
+      background-color: $base-color;
+      padding: 25px 20px;
+
+      @media screen and (min-width: 768px) {
+        padding: 40px 30px;
+      }
+
+      h2 {
+        font-size: 1rem;
+        line-height: 1;
+      }
+
+      button {
+        margin-left: 15px;
+        background-color: transparent;
+        cursor: pointer;
+        transition: .2s;
+        border-radius: 50%;
+        border: solid 1px $text-color;
+        line-height: 1;
+        height: 30px;
+        width: 30px;
+        text-align: center;
+
+        &:hover {
+          background-color: $digital-white;
+        }
+      }
+    }
+
+    .dialog-main {
+      padding: 20px;
+
+      @media screen and (min-width: 768px) {
+        padding: 40px 30px;
+      }
+
+      p {
+        margin-bottom: 10px;
+        color: $text-color;
+
+        strong {
+          color: $secondary-color;
+        }
+
+        @media screen and (min-width: 768px) {
+          margin-bottom: 15px;
+          font-size: 1.2rem;
+        }
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 25px 20px;
+
+        @media screen and (min-width: 768px) {
+          flex-direction: row;
+        }
+
+        img {
+          max-height: 150px;
+          max-width: 100%;
+          border-radius: 15px;
+          border: solid 10px white;
+          box-shadow: 0 0 10px rgba(0,0,0,0.2);
+
+          &:nth-of-type(1) {
+            transform: rotateZ(4deg);
+          }
+
+          &:nth-of-type(2) {
+            transform: rotateZ(-4deg);
+          }
+
+          &:nth-of-type(3) {
+            transform: rotateZ(4deg);
+          }
+        }
+      }
+    }
+  }
+}
+

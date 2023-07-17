@@ -1,0 +1,18 @@
+<div class="view-wrapper">
+  <h1 class="page-title">
+    Welcome to<br>
+    <img src="./assets/world-internet-svgrepo-com.svg" alt="Logo of CountriesBook"/><strong>CountriesBook</strong>
+  </h1>
+  <p class="view-description">
+    Here you can find basic information about all the countries of the world.
+  </p>
+  <nav>
+    <ul>
+      <li *ngFor="let region of regionsList" >
+        <a [routerLink]="['regions/', region]" routerLinkActive="active" ariaCurrentWhenActive="page">
+          {{ region }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

@@ -1,3 +1,32 @@
+
+@use '@angular/material' as mat;
+@include mat.core();
+$angular-app-task-primary: mat.define-palette(mat.$indigo-palette);
+$angular-app-task-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$angular-app-task-warn: mat.define-palette(mat.$red-palette);
+$angular-app-task-theme: mat.define-light-theme((
+  color: (
+    primary: $angular-app-task-primary,
+    accent: $angular-app-task-accent,
+    warn: $angular-app-task-warn,
+  )
+));
+@include mat.all-component-themes($angular-app-task-theme);
+
 @import "styles/reset";
 @import "styles/variables";
 @import "styles/general";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.project-custom-dialog-class {
+  border-radius: 15px;
+
+  .mat-mdc-dialog-container .mdc-dialog__surface {
+    border-radius: 15px;
+    max-height: 90vh;
+    overflow-y: auto;
+  }
+}

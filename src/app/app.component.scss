@@ -1,41 +1,15 @@
 @import "../styles/variables";
 
-header, footer {
-  background-color: $base-color;
-  display: flex;
-  align-items: center;
-  padding: 10px;
-
-  @media screen and (min-width: 768px) {
-    padding: 10px 20px;
-  }
-}
-
-header {
-  height: 60px;
-
-  @media screen and (min-width: 768px) {
-    height: 80px;
-  }
-}
-
 main {
   padding: 10px;
+  min-height: calc(100vh - 140px);
 
   @media screen and (min-width: 768px) {
     padding: 10px 20px;
     min-height: calc(100vh - 180px);
   }
-}
 
-footer {
-  min-height: 80px;
-
-  @media screen and (min-width: 768px) {
-    min-height: 100px;
+  @media screen and (min-width: 1440px) {
+    padding: 40px;
   }
-}
-
-@media screen and (min-width: 768px) {
-
 }

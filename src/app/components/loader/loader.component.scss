@@ -1,0 +1,33 @@
+.loader {
+  margin: auto;
+  height: 400px;
+  width: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+
+  div {
+    height: 60px;
+    width: 60px;
+    background-image: url("../../../assets/loader-circle-svgrepo-com.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    animation: loaderRotate 1.2s linear infinite;
+  }
+
+  @keyframes loaderRotate {
+    from {
+      transform: rotateZ(0);
+    }
+    to {
+      transform: rotateZ(360deg);
+    }
+  }
+
+  p {
+    margin-top: 20px;
+  }
+}
