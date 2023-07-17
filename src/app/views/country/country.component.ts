@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from "../api.service";
+import { ApiService } from "../../api.service";
 import { ActivatedRoute } from "@angular/router";
 import { Location } from '@angular/common'
 
 @Component({
   selector: 'app-country',
   templateUrl: './country.component.html',
-  styleUrls: []
+  styleUrls: ['./country.component.scss']
 })
 export class CountryComponent implements OnInit {
 
@@ -22,6 +22,15 @@ export class CountryComponent implements OnInit {
 
   goBackToPrevPage(): void {
     this.location.back();
+  }
+
+  getCurrency(obj:any) {
+    const arr: string[] = [];
+    Object.entries(obj).forEach(entry => {
+      const [key, value] = entry;
+      arr.push(key);
+    });
+    return arr.join(', ');
   }
 
   ngOnInit() {

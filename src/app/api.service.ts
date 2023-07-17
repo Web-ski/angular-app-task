@@ -8,7 +8,7 @@ import { HttpClient } from '@angular/common/http';
 )
 export class ApiService {
   private regionUrl = 'https://restcountries.com/v3.1/region/';
-  private countryUrl = 'https://restcountries.com/v3.1/name/';
+  private countryUrl = 'https://restcountries.com/v3.1/alpha/';
 
   constructor(private http: HttpClient) { }
 

@@ -6,13 +6,11 @@
   <nav *ngIf="countriesList">
     <ul>
       <li *ngFor="let country of countriesList">
-        <a [routerLink]="[country.name.common]" routerLinkActive="active" ariaCurrentWhenActive="page">
+        <a [routerLink]="[country.cca3]" routerLinkActive="active" ariaCurrentWhenActive="page">
           {{ country.flag }} {{ country.name.common }}
         </a>
       </li>
     </ul>
   </nav>
-  <div class="loader" *ngIf="!countriesList">
-    <div></div>
-  </div>
+  <app-loader *ngIf="!countriesList" />
 </div>

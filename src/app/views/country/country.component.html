@@ -1,0 +1,38 @@
+<div class="view-wrapper" *ngIf="countryData">
+  <h1>{{ countryData.name.common }}</h1>
+  <button class="go-back-link" (click)="goBackToPrevPage()">Go back to the Region view</button>
+  <div class="country-data">
+    <div>
+      <img [src]="countryData.flags.png" [alt]="countryData.flags.alt" />
+      <img *ngIf="countryData.coatOfArms.png" [src]="countryData.coatOfArms.png" alt="Coat of Arms" />
+      <p>{{ countryData.cca3 }}</p>
+    </div>
+    <div>
+      <p class="data-with-label">
+        <span>Official name:</span>
+        <span>{{ countryData.name.official }}</span>
+      </p>
+      <p class="data-with-label">
+        <span>Capital:</span>
+        <span>{{ countryData.capital.join(', ') }}</span>
+      </p>
+      <p class="data-with-label">
+        <span>Currencies:</span>
+        <span>{{ getCurrency(countryData.currencies) }}</span>
+      </p>
+      <p class="data-with-label">
+        <span>Population:</span>
+        <span>{{ countryData.population }}</span>
+      </p>
+      <p class="data-with-label">
+        <span>Subregion:</span>
+        <span>{{ countryData.subregion }}</span>
+      </p>
+      <p class="data-with-label">
+        <span>Domains:</span>
+        <span>{{ countryData.tld.join(', ') }}</span>
+      </p>
+    </div>
+  </div>
+</div>
+<app-loader *ngIf="!countryData" />

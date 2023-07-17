@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ApiService } from "../api.service";
+import { ApiService } from "../../api.service";
 import { ActivatedRoute } from "@angular/router";
 
 @Component({
@@ -14,7 +14,6 @@ export class RegionComponent implements OnInit {
     private service:ApiService,
     private route:ActivatedRoute
   ) {}
-
 
   ngOnInit() {
     this.route.params.subscribe(params=>{

@@ -23,7 +23,7 @@ ul {
     padding: 20px;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     padding: 40px;
   }
 }
@@ -40,7 +40,7 @@ h1 {
     margin-bottom: 1.5rem;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     font-size: 3rem;
     margin-bottom: 2rem;
   }
@@ -54,7 +54,7 @@ h1 {
     font-size: 1.5rem;
   }
 
-  @media screen and (min-width: 1200px) {
+  @media screen and (min-width: 1440px) {
     font-size: 2rem;
   }
 }
@@ -73,26 +73,4 @@ h1 {
   &:hover {
     color: $digital-black;
   }
-}
-
-
-.loader {
-  margin: auto;
-  height: 300px;
-  width: 200px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  div {
-    height: 50px;
-    width: 50px;
-    background-image: url("../assets/loader-circle-svgrepo-com.svg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: contain;
-  }
-
-  /* animacja */
-  /* kolor */
 }
